@@ -9,7 +9,6 @@ import { GlobalContext } from "@/context";
 import AccountPopup from "./account-popup";
 import CircleLoader from "../circle-loader";
 import DetailsPopup from "../details-popup";
-
 export default function Navbar() {
   const { data: session } = useSession();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,7 +37,7 @@ export default function Navbar() {
     },
     {
       id: "tv",
-      title: "TV",
+      title: "TV Series",
       path: "/tv",
     },
     {
@@ -50,6 +49,12 @@ export default function Navbar() {
       id: "my-list",
       title: "My List",
       path: `/my-list/${session?.user?.uid}/${loggedInAccount?._id}`,
+    },
+
+    {
+      id: "payment",
+      title: "subscription",
+      path: "/payment",
     },
   ];
 
